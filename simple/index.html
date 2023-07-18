@@ -9,18 +9,18 @@
 
 <body ng-app="myApp">
 
-    <div ng-init="myClasses = 'firstClass secondClass'">
-        <span ng-class="[{'a': true, 'b': false}, myClasses]">TreinaWeb</span>
+    <div ng-controller="myController as vm">
+        {{ vm.myTitle }}
+        <input type="text" ng-model="vm.myTitle">
     </div>
 
-    <ul ng-init="myList = [1,2,3, 1]">
+    <!-- <ul ng-init="myList = [1,2,3, 1]">
         <li ng-repeat="item in myList track by $index"> {{ item }} - {{ $index }}</li>
-    </ul>
+    </ul> -->
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
-    <script>
-        angular.module('myApp', []);
-    </script>
+    <script src="app.js"></script>
+    <script src="myController.js"></script>
 
 </body>
 

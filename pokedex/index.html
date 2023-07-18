@@ -9,8 +9,19 @@
 
 <div class="App">
     <img roll-on-scroll class="pokeball-back" id="pokeballBack" src="//hanashiro.github.io/pokedex/images/pokeball.svg" alt="">
+    
+    <input type="text" id="pokeFilter" placeholder="Search">
 
-    <ng-view></ng-view>
+    <ul class="poke-list" id="pokeList">
+        <li class="poke-list-item" ng-repeat="i in [1,2,3,4,5,6]">
+            <a>
+                <img src="//serebii.net/pokedex-xy/icon/025.png" alt="">
+                <span>025 - Pikachu</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- <ng-view></ng-view> -->
 </div>
 
 
