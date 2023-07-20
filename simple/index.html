@@ -7,21 +7,13 @@
     <title>AngularJS</title>
 </head>
 
-<body ng-app="myApp">
+<body ng-app="meuApp" ng-controller="meuController">
 
-    <div ng-controller="myController as vm">
-        {{ vm.myTitle }}
-        <input type="text" ng-model="vm.myTitle">
-    </div>
+    {{ nome }} {{ numero }}
 
-    <!-- <ul ng-init="myList = [1,2,3, 1]">
-        <li ng-repeat="item in myList track by $index"> {{ item }} - {{ $index }}</li>
-    </ul> -->
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
-    <script src="app.js"></script>
-    <script src="myController.js"></script>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>
