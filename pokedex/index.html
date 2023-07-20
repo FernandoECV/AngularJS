@@ -7,16 +7,16 @@
 </head>
 <body ng-app="pokedexApp" >
 
-<div class="App">
+<div class="App" ng-controller="PokeDexController as vm">
     <img roll-on-scroll class="pokeball-back" id="pokeballBack" src="//hanashiro.github.io/pokedex/images/pokeball.svg" alt="">
     
-    <input type="text" id="pokeFilter" placeholder="Search">
+    <input type="text" id="pokeFilter" placeholder="Search" ng-model="vm.searchText">
 
     <ul class="poke-list" id="pokeList">
-        <li class="poke-list-item" ng-repeat="i in [1,2,3,4,5,6]">
+        <li class="poke-list-item" ng-repeat="pkm in vm.pkmList">
             <a>
-                <img src="//serebii.net/pokedex-xy/icon/025.png" alt="">
-                <span>025 - Pikachu</span>
+                <img src="//serebii.net/pokedex-xy/icon/{{pkm.number}}.png" alt="">
+                <span> {{ pkm.number }} - {{ pkm.name }}</span>
             </a>
         </li>
     </ul>
