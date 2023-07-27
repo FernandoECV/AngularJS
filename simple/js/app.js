@@ -1,8 +1,8 @@
-angular.module('meuApp', [])
+angular.module('myApp', [])
 
-.controller('meuController', ['$scope', '$interval', function($scope, $interval){
-    $scope.nome = "Treina Web";
-    $scope.numero = 0;
+// .controller('meuController', ['$scope', '$interval', function($scope, $interval){
+//     $scope.nome = "Treina Web";
+//     $scope.numero = 0;
 
     // $interval(function(){
     //     $scope.numero++;
@@ -14,4 +14,4 @@ angular.module('meuApp', [])
     //     }); 
     // }, 1000);
 
-}]);//
+// }]);//

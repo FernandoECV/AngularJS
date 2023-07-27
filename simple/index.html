@@ -7,13 +7,18 @@
     <title>AngularJS</title>
 </head>
 
-<body ng-app="meuApp" ng-controller="meuController">
+<body ng-app="myApp">
 
-    {{ nome }} {{ numero }}
-
+    <div ng-controller="myController as vm">
+        <input type="text" ng-model="vm.myTitle" /> {{ vm.myTitle }}
+        <br><br>
+        <my-component text="vm.myTitle" my-func="vm.print"></my-component>
+    </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="myController.js"></script>
+    <script src="myComponent.js"></script>
 </body>
 
 </html>
