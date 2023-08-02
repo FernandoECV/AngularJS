@@ -7,6 +7,10 @@ function myController() {
     vm.print = function(value){
         console.log('Function from Controller: ', value);
     }
-    
 
+    vm.$onInit = function() {
+        console.log('Iniciando Componente')
+    }    
+    
+    
 }

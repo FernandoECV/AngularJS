@@ -4,7 +4,8 @@ angular.module('myApp').component('myComponent',{
     bindings: {
         text: '<',
         myFunc: '='
-    }
+    },
+    transclude: true
 })
 
 function MyComponentController(){

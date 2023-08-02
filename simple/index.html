@@ -12,7 +12,10 @@
     <div ng-controller="myController as vm">
         <input type="text" ng-model="vm.myTitle" /> {{ vm.myTitle }}
         <br><br>
-        <my-component text="vm.myTitle" my-func="vm.print"></my-component>
+        <my-component text="vm.myTitle" my-func="vm.print">
+            <button>Click Me</button>
+
+        </my-component>
     </div>
 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
